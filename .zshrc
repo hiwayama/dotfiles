@@ -8,9 +8,9 @@ alias la='ls -lFha'
 alias df='df -h'
 alias psql='psql -h localhost'
 alias rm='rm -i'
-alias gcc='gcc-4.2'
+#alias gcc='gcc-4.2'
 alias irb='pry'
-
+alias grep='grep --color=auto'
 
 # ----------------
 # General Setting
@@ -35,6 +35,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補間時に大文字小�
 HISTFILE=~/.zsh_history # ヒストリを保存するファイル
 HISTSIZE=10000          # メモリに保存するヒストリの件数
 SAVEHIST=10000          # 保存されるヒストリの件数
+export HISTTIMEFORMAT='%y/%m/%d %H:%M:%S'
 setopt extended_history # ヒストリに実行時間も保存
 setopt hist_ignore_dups # 直前と同じコマンドはヒストリに追加しない
 
@@ -56,8 +57,11 @@ export CLICOLOR=true
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 
-export CC=gcc-4.2
+#export CC=gcc-4.2
 # JVMの起動設定
 export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xmx1024m'
+export R_HOME=/Library/Frameworks/R.framework/Resources
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
