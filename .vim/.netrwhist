@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/iwayama/Documents/workspace/scala/PalmitersBug/.git'
-let g:netrw_dirhist_2='/Users/iwayama/Documents/workspace/scala'
-let g:netrw_dirhist_3='/Users/iwayama/Documents/workspace/java/HelloWorldJava'
-let g:netrw_dirhist_4='/Users/iwayama/Documents/workspace/ruby/AtCoder/regular002'
-let g:netrw_dirhist_5='/Users/iwayama/readline-6.1'
