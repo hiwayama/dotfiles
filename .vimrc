@@ -58,6 +58,10 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
 
+" indent and syntax highlight for coffee script
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+Bundle 'kchmck/vim-coffee-script'
+
 " scala setting
 autocmd FileType scala setl smartindent cinwords={
 let g:neocomplcache_enable_at_startup = 1
