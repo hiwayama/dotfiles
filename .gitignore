@@ -3,4 +3,4 @@
 .vim/.DS_Store
 .vim/.netrwhist
 !.vim/template
-
+!.vim/snippets
