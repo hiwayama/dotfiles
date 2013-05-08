@@ -75,18 +75,17 @@ let g:neocomplcache_dictionary_filetype_lists = {
     \ 'scala' : $HOME . './vim/dict/scala.dict',
     \}
 
-" ruby setting
+" load template
+autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
 autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
+autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
+
+" ruby setting
 filetype plugin on
-autocmd FileType ruby setl tabstop=2
-autocmd FileType ruby setl shiftwidth=2
 
 " python setting
-autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=2
-autocmd FileType python setl shiftwidth=2
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
