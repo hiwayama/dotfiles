@@ -9,6 +9,8 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'derekwyatt/vim-scala'
+"Bundle 'scala.vim'
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -64,24 +66,14 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
 
-" indent and syntax highlight for coffee script
+" to be recognized filetype
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
-" scala setting
-autocmd FileType scala setl smartindent cinwords={
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'scala' : $HOME . './vim/dict/scala.dict',
-    \}
+autocmd BufNewFile,BufRead *.scala set filetype=scala
 
 " load template
 autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
 autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
 autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
-
-" ruby setting
-filetype plugin on
 
 " python setting
 autocmd FileType python setl autoindent
