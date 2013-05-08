@@ -4,6 +4,9 @@ filetype plugin on
 set rtp+=~/.vim/vundle/
 call vundle#rc('~/.vim/bundle')
 
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'Shougo/neocomplcache'
+
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -60,7 +63,6 @@ nnoremap <Up> gk
 
 " indent and syntax highlight for coffee script
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-Bundle 'kchmck/vim-coffee-script'
 
 " scala setting
 autocmd FileType scala setl smartindent cinwords={

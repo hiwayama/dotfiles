@@ -4,3 +4,4 @@
 .vim/.netrwhist
 !.vim/template
 !.vim/snippets
+!.vim/tmp
