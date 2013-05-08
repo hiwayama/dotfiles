@@ -1,8 +1,3 @@
-"
-" before using vim, enter this command to install Vundle
-" git clone http://github.com/gmarik/vundle.git ~/dotfiles/.vim/vundle
-"
-
 filetype plugin on
 
 " vundleを使うためのおまじない
@@ -13,6 +8,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'plasticboy/vim-markdown'
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)

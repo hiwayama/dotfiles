@@ -2,13 +2,12 @@
 # ------
 # alias
 # ------
-alias gimp='/Applications/Gimp.app/Contents/MacOS/Gimp'
+alias gimp='/Applications/Gimp.app/Contents/MacOS/Gimp' # Mac only
 alias ll='ls -lFh'
 alias la='ls -lFha'
 alias df='df -h'
 alias psql='psql -h localhost'
 alias rm='rm -i'
-#alias gcc='gcc-4.2'
 alias irb='pry'
 alias grep='grep --color=auto'
 
@@ -57,7 +56,6 @@ export CLICOLOR=true
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 
-#export CC=gcc-4.2
 # JVMの起動設定
 export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xmx1024m'
 export R_HOME=/Library/Frameworks/R.framework/Resources
