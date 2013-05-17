@@ -1,4 +1,4 @@
-filetype plugin on
+filetype plugin off
 
 " vundleを使うためのおまじない
 set rtp+=~/.vim/vundle/
@@ -10,7 +10,9 @@ Bundle 'Shougo/neosnippet'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
-"Bundle 'scala.vim'
+Bundle 'scala.vim'
+
+filetype plugin on
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -69,6 +71,7 @@ nnoremap <Up> gk
 " to be recognized filetype
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.scala set filetype=scala
+autocmd BufNewFile,BufRead *.R set filetype=R
 
 " load template
 autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
