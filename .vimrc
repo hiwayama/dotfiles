@@ -60,13 +60,18 @@ set shiftwidth=2
 set smartindent
 
 " 回り込み
-set whichwrap=b,s,[,],<,>,~
+set whichwrap=b,s,h,l,[,],<,>,~
 
 " 表示通りに上下移動をする
 nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
+
+" 行末がかっこで終わる場合の閉じかっこの補間
+inoremap {<CR> {<CR>}<Up><End><CR>
+inoremap (<CR> (<CR>)<Up><End><CR>
+inoremap [<CR> [<CR>]<Up><End><CR>
 
 " to be recognized filetype
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
@@ -75,10 +80,12 @@ autocmd BufNewFile,BufRead *.R set filetype=R
 
 " load template
 autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
+
+" ruby setting
 autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
-autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
 
 " python setting
+autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
