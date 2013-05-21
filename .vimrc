@@ -1,7 +1,7 @@
 filetype plugin off
 
 " vundleを使うためのおまじない
-set rtp+=~/.vim/vundle/
+set rtp+=~/.vim/vundle.git/
 call vundle#rc('~/.vim/bundle')
 
 Bundle 'kchmck/vim-coffee-script'

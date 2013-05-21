@@ -1,7 +1,7 @@
 # dotfiles
 
-## .vimrc
-before using vim, enter this command to install Vundle  
+before using this dotfiles, enter this command 
 
-    git clone http://github.com/gmarik/vundle.git ~/dotfiles/.vim/vundle
+    make link
+    make gitinit
 
