@@ -1,6 +1,6 @@
 # init dotfiles
 
-DOTFILES = .vimrc .vim .zshrc .tmux.conf .gitconfig .gemrc 
+DOTFILES = .vimrc .vim .zshrc .tmux.conf .gitconfig .gemrc .sbtconfig
 
 link: $(foreach f, $(DOTFILES), link-dotfiles-$(f))
 

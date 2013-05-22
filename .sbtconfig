@@ -1,0 +1,2 @@
+SBT_OPTS="-XX:MaxPermSize=256M"
+SBT_OPTS=-Dfile.encoding=UTF-8
