@@ -12,7 +12,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'scala.vim'
 
-filetype plugin on
+filetype plugin indent on
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -78,7 +78,10 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.scala set filetype=scala
 autocmd BufNewFile,BufRead *.R set filetype=R
 
-" load template
+" makefile setting
+autocmd FileType make setl noexpandtab
+
+" haml setting
 autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
 
 " ruby setting
