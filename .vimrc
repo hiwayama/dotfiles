@@ -1,9 +1,11 @@
-filetype plugin off
+set nocompatible
+filetype off
 
 " vundleを使うためのおまじない
 set rtp+=~/.vim/vundle.git/
 call vundle#rc('~/.vim/bundle')
 
+" plugin list
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
@@ -14,7 +16,91 @@ Bundle 'scala.vim'
 
 filetype plugin indent on
 
-" Plugin key-mappings.
+" search
+set hlsearch
+set incsearch
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
+
+" cursorline
+set cursorline
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+augroup END
+:hi clear CursorLine
+:hi CursorLine gui=underline
+highlight CursorLine ctermbg=black guibg=black
+
+" backup dir
+set directory=~/.vim/tmp
+
+syntax on
+set number
+
+" statuslineの設定
+set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[ROW=%l/%L]
+set laststatus=2
+augroup ch_status_color
+  autocmd! ch_status_color
+  autocmd InsertEnter * highlight StatusLine ctermfg=Yellow
+  autocmd InsertLeave * highlight StatusLine ctermfg=Green
+augroup END
+
+" tab
+set expandtab
+set tabstop=2 softtabstop=0
+
+" indent
+set shiftwidth=2
+set smartindent
+
+" 回り込み
+set whichwrap=b,s,h,l,[,],<,>,~
+
+"------------------------------------------
+" key mapping
+"------------------------------------------
+" 表示通りに上下移動をする
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+
+" 行末がかっこで終わる場合の閉じかっこの補間
+inoremap {<CR> {<CR>}<Up><End><CR>
+inoremap (<CR> (<CR>)<Up><End><CR>
+inoremap [<CR> [<CR>]<Up><End><CR>
+
+
+
+" to be recognized filetype
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.scala set filetype=scala
+autocmd BufNewFile,BufRead *.R set filetype=R
+
+" load templates
+augroup load_templates
+  autocmd!
+  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
+  autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
+  autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
+augroup END
+
+
+" makefile setting
+autocmd FileType make setl noexpandtab
+
+" python setting
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+
+"------------------------------
+" neosnippet settings
+"------------------------------
+
+" Plugin key-mappings. for neosnippet
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
@@ -27,70 +113,9 @@ if has('conceal')
     set conceallevel=2 concealcursor=i
 endif
 
-nmap <ESC><ESC> ;nohlsearch<CR><ESC>
-
-set cursorline
-augroup cch
-	autocmd! cch
-	autocmd WinLeave * set nocursorline
-	autocmd WinEnter,BufRead * set cursorline
-augroup END
-
-:hi clear CursorLine
-:hi CursorLine gui=underline
-highlight CursorLine ctermbg=black guibg=black
-
-" backup dir
-:set directory=~/.vim/tmp
-
-syn on
-set number
-
-" statuslineの設定
-set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[ROW=%l/%L]
-set laststatus=2
-
-" tab
-set expandtab
-set tabstop=2
-set softtabstop=0
-
-" indent
-set shiftwidth=2
-set smartindent
-
-" 回り込み
-set whichwrap=b,s,h,l,[,],<,>,~
-
-" 表示通りに上下移動をする
-nnoremap j gj
-nnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-
-" 行末がかっこで終わる場合の閉じかっこの補間
-inoremap {<CR> {<CR>}<Up><End><CR>
-inoremap (<CR> (<CR>)<Up><End><CR>
-inoremap [<CR> [<CR>]<Up><End><CR>
-
-" to be recognized filetype
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd BufNewFile,BufRead *.scala set filetype=scala
-autocmd BufNewFile,BufRead *.R set filetype=R
-
-" makefile setting
-autocmd FileType make setl noexpandtab
-
-" haml setting
-autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
-
-" ruby setting
-autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
-
-" python setting
-autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
-autocmd FileType python setl autoindent
-autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+"---------------------------
+" neocomplcache settings
+"---------------------------
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
