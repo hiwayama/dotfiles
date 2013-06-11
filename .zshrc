@@ -64,3 +64,7 @@ export R_HOME=/Library/Frameworks/R.framework/Resources
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Perlbrew settings
+source $HOME/perl5/perlbrew/etc/bashrc
+
