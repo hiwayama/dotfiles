@@ -12,7 +12,6 @@ Bundle 'Shougo/neosnippet'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
-Bundle 'scala.vim'
 
 filetype plugin indent on
 
@@ -33,7 +32,7 @@ augroup END
 highlight CursorLine ctermbg=black guibg=black
 
 " backup dir
-set directory=~/.vim/tmp
+set directory=$HOME/.vim/tmp
 
 syntax on
 set number
@@ -57,6 +56,7 @@ set smartindent
 
 " 回り込み
 set whichwrap=b,s,h,l,[,],<,>,~
+
 
 "------------------------------------------
 " key mapping
