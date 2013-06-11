@@ -85,6 +85,7 @@ augroup load_templates
   autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
   autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
   autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
+  autocmd BufNewFile *.pl 0r $HOME/.vim/template/template.pl
 augroup END
 
 
