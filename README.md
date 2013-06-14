@@ -1,7 +1,8 @@
 # dotfiles
 
+
 before using this dotfiles, enter this command 
 
-    make link
-    make gitinit
+    rake link
+    rake gitinit
 

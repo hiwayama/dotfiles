@@ -1,8 +1,7 @@
 *.swp
 .DS_Store
-.DS_Store
-.vim/bundle
-.vim/vundle
-!.vim/template
-!.vim/snippets
-!.vim/tmp
+vim/bundle
+vim/vundle
+!vim/template
+!vim/snippets
+!vim/tmp
