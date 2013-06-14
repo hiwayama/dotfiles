@@ -22,8 +22,8 @@ task :unlink do
 end
 
 task :gitinit do
-  sytem("git submodule init")
-  sytem("git submodule update")
+  system("git submodule init")
+  system("git submodule update")
 end
 
 
