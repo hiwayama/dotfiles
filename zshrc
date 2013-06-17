@@ -2,11 +2,9 @@
 # ------
 # alias
 # ------
-alias gimp='/Applications/Gimp.app/Contents/MacOS/Gimp' # Mac only
 alias ll='ls -lFh'
 alias la='ls -lFha'
 alias df='df -h'
-alias psql='psql -h localhost'
 alias rm='rm -i'
 alias irb='pry'
 alias grep='grep --color=auto'
@@ -17,7 +15,6 @@ alias grep='grep --color=auto'
 export EDITOR=vim       # エディタをVimに 
 export LANG=ja_JP.UTF-8 # 文字コードをUTF-8に
 export KCODE=u          # KCODEにUTF-8を設定
-export GISTY_DIR="$HOME/Documents/gists"
 
 # -----------
 # Complement 
