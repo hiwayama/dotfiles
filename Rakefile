@@ -8,8 +8,13 @@ CURRENT = File.expand_path("./")
 # set symlinks
 task :link do
   DOTFILES.each do |file|
-    File.symlink("#{CURRENT}/#{file}", "#{HOME}/.#{file}")
-    puts "link : #{HOME}/.#{file}"
+    begin
+      File.symlink("#{CURRENT}/#{file}", "#{HOME}/.#{file}")
+    rescue => e
+      puts e
+    else
+      puts "link : #{HOME}/.#{file}"
+    end
   end
 end
 
