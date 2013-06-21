@@ -26,6 +26,7 @@ task :unlink do
   end
 end
 
+# submodule update
 task :gitinit do
   system("git submodule init")
   system("git submodule update")

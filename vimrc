@@ -17,6 +17,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'vim-perl/vim-perl'
 
 syntax on
 set number
@@ -84,7 +85,7 @@ autocmd BufNewFile,BufRead *.coffee   setl filetype=coffee
 autocmd BufNewFile,BufRead *.R        setl filetype=R
 autocmd BufNewFile,BufRead *.psgi     setl filetype=perl
 autocmd BufNewFile,BufRead *.t        setl filetype=perl
-autocmd BufNewFile,BufRead *.html.ep  setl filetype=html
+"autocmd BufNewFile,BufRead *.html.ep  setl filetype=html
 autocmd BufNewFile,BufRead *.spec     setl filetype=ruby
 
 " Load Templates
