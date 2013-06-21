@@ -3,8 +3,8 @@
 " based on http://github.com/ymis1080/dotfiles
 " ==============================================
 
+" vi互換off
 set nocompatible
-filetype off
 
 " vundleを使うためのおまじない
 set rtp+=~/.vim/vundle.git/
@@ -18,10 +18,9 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
 
-
-filetype plugin indent on
 syntax on
 set number
+filetype plugin indent on
 set directory=$HOME/.vim/tmp " Backup Directory
 set clipboard=unnamed
 set history=100 " keep 100 lines of command line history
@@ -81,11 +80,12 @@ inoremap <C-d> $
 inoremap <C-a> @
 
 " Set filetypes
-autocmd BufNewFile,BufRead *.coffee setl filetype=coffee
-autocmd BufNewFile,BufRead *.R      setl filetype=R
-autocmd BufNewFile,BufRead *.psgi   setl filetype=perl
-autocmd BufNewFile,BufRead *.t      setl filetype=perl
-autocmd BufNewFile,BufRead *.spec   setl filetype=ruby
+autocmd BufNewFile,BufRead *.coffee   setl filetype=coffee
+autocmd BufNewFile,BufRead *.R        setl filetype=R
+autocmd BufNewFile,BufRead *.psgi     setl filetype=perl
+autocmd BufNewFile,BufRead *.t        setl filetype=perl
+autocmd BufNewFile,BufRead *.html.ep  setl filetype=html
+autocmd BufNewFile,BufRead *.spec     setl filetype=ruby
 
 " Load Templates
 augroup load_templates
