@@ -1,0 +1,33 @@
+" ===========================================
+" dotfiles/vimrc.mapping
+" 
+" Author: Hiromasa IWAYAMA
+" ===========================================
+
+"------------------------------------------
+" Key Mapping
+"------------------------------------------
+" display lines moving
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+
+" Closing Parenthesis Complement
+inoremap {<CR> {<CR>}<Up><End><CR>
+inoremap (<CR> (<CR>)<Up><End><CR>
+inoremap [<CR> [<CR>]<Up><End><CR>
+
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap <> <><LEFT>
+
+" Symbol Alias
+inoremap <C-d> $
+inoremap <C-a> @
+
+" add space next to dot
+inoremap , ,<Space>

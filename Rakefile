@@ -26,10 +26,11 @@ task :unlink do
   end
 end
 
-# submodule update
-task :gitinit do
+# submodule update & plugin install
+task :init do
   system("git submodule init")
   system("git submodule update")
+  system("vim -c \"BundleInstall\"")
 end
 
 
