@@ -3,8 +3,9 @@
 " based on http://github.com/ymis1080/dotfiles
 " ==============================================
 
-" vi互換off
-set nocompatible
+
+set nocompatible " vi互換off
+filetype off
 
 " vundleを使うためのおまじない
 set rtp+=~/.vim/vundle.git/
@@ -18,6 +19,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-perl/vim-perl'
+Bundle 'scrooloose/syntastic'
 
 syntax on
 set number
@@ -76,6 +78,14 @@ inoremap {<CR> {<CR>}<Up><End><CR>
 inoremap (<CR> (<CR>)<Up><End><CR>
 inoremap [<CR> [<CR>]<Up><End><CR>
 
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap <> <><LEFT>
+
+
 " Symbol Alias
 inoremap <C-d> $
 inoremap <C-a> @
@@ -85,7 +95,7 @@ autocmd BufNewFile,BufRead *.coffee   setl filetype=coffee
 autocmd BufNewFile,BufRead *.R        setl filetype=R
 autocmd BufNewFile,BufRead *.psgi     setl filetype=perl
 autocmd BufNewFile,BufRead *.t        setl filetype=perl
-"autocmd BufNewFile,BufRead *.html.ep  setl filetype=html
+autocmd BufNewFile,BufRead *.html.ep  setl filetype=html
 autocmd BufNewFile,BufRead *.spec     setl filetype=ruby
 
 " Load Templates
@@ -96,7 +106,6 @@ augroup load_templates
   autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
   autocmd BufNewFile *.pl 0r $HOME/.vim/template/template.pl
 augroup END
-
 
 " makefile Settings
 autocmd FileType make setl noexpandtab
