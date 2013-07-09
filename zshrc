@@ -78,7 +78,8 @@ case "${OSTYPE}" in
     ;;
   # Linux
   linux*)
-    
+    unset SSH_ASKPASS
+    # SSHで接続時にgitのssh接続でのエラー回避の為
     ;;
 esac
 
