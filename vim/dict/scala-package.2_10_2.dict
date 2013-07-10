@@ -1,3 +1,4 @@
+# scala package structure
 scala.actors
 scala.actors.Actor
 scala.annotation

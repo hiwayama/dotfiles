@@ -23,7 +23,10 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-perl/vim-perl'
-Bundle 'scrooloose/syntastic'
+Bundle 'Shougo/unite.vim'
+Bundle 'h1mesuke/unite-outline'
+"Bundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
+"Bundle 'scrooloose/syntastic' 保存が遅くなる...
 
 syntax on
 set number
@@ -70,11 +73,12 @@ set whichwrap=b,s,h,l,[,],<,>,~
 " Load Templates
 augroup load_templates
   autocmd!
-  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
+  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml 
   autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
   autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
   autocmd BufNewFile *.pl 0r $HOME/.vim/template/template.pl
   autocmd BufNewFile *.vim 0r $HOME/.vim/template/template.vim
+  autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
 
 " load key mapping setting

@@ -41,6 +41,11 @@ setopt hist_ignore_dups # 直前と同じコマンドはヒストリに追加し
 # -------
 autoload -U colors; colors
 
+setopt prompt_subst
+source $HOME/.zsh/prompt-git-current-branch
+PROMPT='%B%(?.%f.%F{red}@_@%f) %F{blue}[%M:%/]%f`prompt-git-current-branch`%b
+%(!.%F{red}%B%n%b%f # .%n%f$ )'
+
 # ----------------------
 # Look And Feel Settings
 # ----------------------
@@ -56,7 +61,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # JVMの起動設定
 export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xmx1024m'
-export R_HOME=/Library/Frameworks/R.framework/Resources
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
@@ -64,4 +68,18 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Perlbrew settings
 source $HOME/perl5/perlbrew/etc/bashrc
+
+
+case "${OSTYPE}" in
+  # Max(Unix)
+  darwin*)
+    export R_HOME=/Library/Frameworks/R.framework/Resources
+    alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+    ;;
+  # Linux
+  linux*)
+    
+    ;;
+esac
+
 
