@@ -25,6 +25,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-perl/vim-perl'
 Bundle 'Shougo/unite.vim'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'tpope/vim-fugitive'
 "Bundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
 "Bundle 'scrooloose/syntastic' 保存が遅くなる...
 
