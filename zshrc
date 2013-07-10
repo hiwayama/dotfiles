@@ -43,7 +43,7 @@ autoload -U colors; colors
 
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
-PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%m:%/]%f`prompt-git-current-branch`%b
+PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}(¦3[___]%f %F{cyan}[%m:%/]%f`prompt-git-current-branch`%b
 %(!.%F{red}%B%n%b%f # .%n%f$ )'
 
 # ----------------------
