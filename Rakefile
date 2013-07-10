@@ -1,6 +1,6 @@
 # init dotfiles
 
-DOTFILES = %w(vimrc vim zshrc tmux.conf gitconfig gemrc sbtconfig)
+DOTFILES = %w(vimrc vim zshrc zsh tmux.conf gitconfig gemrc sbtconfig)
 
 HOME = File.expand_path(ENV["HOME"])
 CURRENT = File.expand_path("./")
