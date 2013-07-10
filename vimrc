@@ -44,19 +44,13 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " Cursorline
 set cursorline
-augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorline
-  autocmd WinEnter,BufRead * set cursorline
-augroup END
-:hi clear CursorLine
-:hi CursorLine gui=underline
-highlight CursorLine ctermbg=black guibg=black
-
+highlight clear CursorLine
+highlight CursorLine gui=underline ctermbg=black
 
 " Statusline
-set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[ROW=%l/%L]
+set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
 set laststatus=2
+highlight StatusLine ctermfg=Green
 augroup ch_status_color
   autocmd! ch_status_color
   autocmd InsertEnter * highlight StatusLine ctermfg=Yellow
@@ -75,10 +69,10 @@ set whichwrap=b,s,h,l,[,],<,>,~
 augroup load_templates
   autocmd!
   autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml 
-  autocmd BufNewFile *.rb 0r $HOME/.vim/template/template.rb
-  autocmd BufNewFile *.py 0r $HOME/.vim/template/template.py
-  autocmd BufNewFile *.pl 0r $HOME/.vim/template/template.pl
-  autocmd BufNewFile *.vim 0r $HOME/.vim/template/template.vim
+  autocmd BufNewFile *.rb   0r $HOME/.vim/template/template.rb
+  autocmd BufNewFile *.py   0r $HOME/.vim/template/template.py
+  autocmd BufNewFile *.pl   0r $HOME/.vim/template/template.pl
+  autocmd BufNewFile *.vim  0r $HOME/.vim/template/template.vim
   autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
 
