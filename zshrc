@@ -43,7 +43,7 @@ autoload -U colors; colors
 
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
-PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}(¦3[___]%f %F{cyan}[%m:%/]%f`prompt-git-current-branch`%b
+PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}(¦3[___]%f %F{cyan}[%m:%~]%f`prompt-git-current-branch`%b
 %(!.%F{red}%B%n%b%f # .%n%f$ )'
 
 # ----------------------
@@ -60,7 +60,7 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 
 # JVMの起動設定
-export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xmx1024m'
+export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xms512M -Xmx1024m -XX:MaxPermSize=256M -XX:PermSize=256M'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
