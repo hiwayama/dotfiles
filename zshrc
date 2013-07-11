@@ -43,11 +43,10 @@ autoload -U colors; colors
 
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
-#PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}(¦3[___]%f %F{cyan}[%m:%~]%f`prompt-git-current-branch`%b
-#%(!.%F{red}%B%n%b%f # .%n%f$ )'
-
+AA_LIST=("(:3[___]" "(¦3[___]")
 PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%m:%~]%f`prompt-git-current-branch`%b
-%(!.%F{red}%B%n%b%f # .%F{yellow}(:3[__]%f $ )'
+%(!.%F{red}%B%n%b%f # .%F{yellow}${AA_LIST[$[1+$RANDOM %2]]}%f $ )'
+
 
 # ----------------------
 # Look And Feel Settings
@@ -55,7 +54,7 @@ PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%m:%~]%f`prompt-git-current-branch`%b
 # 色の設定
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # 補間時の色の設定
-export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LS_COLORS='di=01;36:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 # lsコマンド時に色がつく
 export CLICOLOR=true
 # 補完候補に色を付ける
