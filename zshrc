@@ -46,9 +46,8 @@ local AA_LIST >/dev/null
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
 AA_LIST=("(:3[___]" "(¦3[___]")
-PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%m:%~]%f`prompt-git-current-branch`%b
+PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%n@%m:%~]%f `prompt-git-current-branch`%b %D{%m/%d %T}
 %(!.%F{red}%B%n%b%f # .%F{yellow}${AA_LIST[$[1+$RANDOM %2]]}%f $ )'
-
 
 # ----------------------
 # Look And Feel Settings
