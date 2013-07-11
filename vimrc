@@ -8,12 +8,13 @@
 set nocompatible " vi interchange off
 filetype off
 
-" get current directory path
-let scriptdir = fnamemodify("vimrc", ":p:h") . "/"
+" dotfiles directory path
+" WARN: please change to a suitable path
+let s:dotfiles_path='~/dotfiles/'
 
 " vundleを使うためのおまじない
-set rtp+=~/.vim/vundle.git/
-call vundle#rc('~/.vim/bundle')
+set rtp+=$HOME/.vim/vundle.git/
+call vundle#rc($HOME.'/.vim/bundle')
 
 " Plugin list
 Bundle 'Shougo/neocomplcache'
@@ -77,8 +78,8 @@ augroup load_templates
 augroup END
 
 " load key mapping setting
-source ~/dotfiles/vimrc.mapping
+execute "source" s:dotfiles_path.'vimrc.mapping'
 
 " load plugin dependent setting file
-source ~/dotfiles/vimrc.plugins_setting
+execute "source" s:dotfiles_path.'vimrc.plugins_setting'
 
