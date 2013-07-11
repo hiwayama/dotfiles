@@ -41,6 +41,8 @@ setopt hist_ignore_dups # 直前と同じコマンドはヒストリに追加し
 # -------
 autoload -U colors; colors
 
+local AA_LIST >/dev/null
+
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
 AA_LIST=("(:3[___]" "(¦3[___]")
