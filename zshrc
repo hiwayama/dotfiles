@@ -47,6 +47,8 @@ local AA_LIST >/dev/null
 AA_LIST=("(:3[___]" "(¦3[___]")
 PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%n@%m:%~]%f `prompt-git-current-branch`%b [%D{%m/%d %T}]
 %(!.%F{red}%B%n%b%f # .%F{yellow}${AA_LIST[$[1+$RANDOM %2]]}%f $ )'
+PROMPT2='%_%% '
+SPROMPT="%r is currect? [n, y, a, e]: "
 
 # ----------------------
 # Look And Feel Settings
