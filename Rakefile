@@ -30,7 +30,7 @@ end
 task :init do
   system("git submodule init")
   system("git submodule update")
-  system("vim -c \"BundleInstall\"")
+  system("vim -c \"NeoBundleInstall\"")
 end
 
 

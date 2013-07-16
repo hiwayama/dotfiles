@@ -12,23 +12,26 @@ filetype off
 " WARN: please change to a suitable path
 let s:dotfiles_path='~/dotfiles/'
 
-" vundleを使うためのおまじない
-set rtp+=$HOME/.vim/vundle.git/
-call vundle#rc($HOME.'/.vim/bundle')
+" neobundle
+if has('vim_starting')
+  set runtimepath+=~/.vim/neobundle.vim/
+endif
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Plugin list
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'vim-perl/vim-perl'
-Bundle 'Shougo/unite.vim'
-Bundle 'h1mesuke/unite-outline'
-Bundle 'tpope/vim-fugitive'
-"Bundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
-"Bundle 'scrooloose/syntastic' 保存が遅くなる...
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tpope/vim-fugitive'
+
+NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload': {'filetypes':['coffee']}}
+NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': {'filetypes':['ruby', 'erb']}}
+NeoBundleLazy 'plasticboy/vim-markdown', {'autoload': {'filetypes':['markdown']}}
+NeoBundleLazy 'derekwyatt/vim-scala', {'autoload': {'filetypes':['scala']}}
+NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
+" NeoBundle 'h1mesuke/unite-outline'
+" NeoBundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
+" NeoBundle 'scrooloose/syntastic' 保存が遅くなる...
 
 syntax on
 set number
