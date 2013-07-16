@@ -33,13 +33,13 @@ NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
 " NeoBundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
 " NeoBundle 'scrooloose/syntastic' 保存が遅くなる...
 
+filetype plugin indent on
+
 syntax on
 set number
 set directory=$HOME/.vim/tmp " Backup Directory
 set clipboard=unnamed
 set history=100 " keep 100 lines of command line history
-
-filetype plugin indent on
 
 " Search
 set hlsearch
