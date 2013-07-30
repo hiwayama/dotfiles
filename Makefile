@@ -2,19 +2,22 @@
 
 DOTFILES = vimrc vim zshrc zsh tmux.conf gitconfig gemrc sbtconfig
 
+init : link neobundle
+
 link: $(foreach f, $(DOTFILES), link-dotfiles-$(f))
 
 unlink: $(foreach f, $(DOTFILES), unlink-dotfiles-$(f))
 
-gitinit:
+neobundle:
 	@git submodule init
 	@git submodule update
+	@vim -c "NeoBundleInstall"
 
 link-dotfiles-%: %
-	@echo "link $< => $(HOME)/$<"
+	@echo "link $< => $(HOME)/.$<"
 	@ln -snf $(CURDIR)/$< $(HOME)/.$<
 
 unlink-dotfiles-%: %
-	@echo "unlink $(HOME)/$<"
+	@echo "unlink $(HOME)/.$<"
 	@$(RM) $(HOME)/.$<
 
