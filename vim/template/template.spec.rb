@@ -6,9 +6,9 @@
 #
 #
 
-$:.unshift File.dirname(__FILE__)
+$:.unshift File.expand_path("../", __FILE__)
 
-require'hoge'
+require'rspec'
 
 describe , "" do
 
