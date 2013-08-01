@@ -15,6 +15,7 @@ alias grep='grep --color=auto'
 export EDITOR=vim       # エディタをVimに 
 export LANG=ja_JP.UTF-8 # 文字コードをUTF-8に
 export KCODE=u          # KCODEにUTF-8を設定
+export LC_ALL=C
 
 # -----------
 # Complement 
