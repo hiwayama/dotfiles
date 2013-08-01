@@ -1,0 +1,18 @@
+# prompt-ruby-current
+
+function prompt-ruby-current {
+  local name st color
+  
+  if [ ! `ls | grep '\.rb'` ]
+  then
+    return
+  fi  
+
+  name=`ruby -v | grep -Go -e 'ruby [0-9.p]\+'`
+  if [[ -z $name ]]
+  then
+    return
+  fi
+  color="blue"
+  echo "%F{$color}[$name]%f"
+}

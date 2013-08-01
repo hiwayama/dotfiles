@@ -15,7 +15,7 @@ alias grep='grep --color=auto'
 export EDITOR=vim       # エディタをVimに 
 export LANG=ja_JP.UTF-8 # 文字コードをUTF-8に
 export KCODE=u          # KCODEにUTF-8を設定
-export LC_ALL=C
+#export LC_ALL=C
 
 # -----------
 # Complement 
@@ -25,7 +25,7 @@ setopt auto_list                # 補完候補を一覧で表示する
 setopt auto_menu                # 補間キー連打で候補を順に表示
 setopt list_packed              # 補完候補をできるだけ詰めて表示する
 bindkey "^[[Z" reverse-menu-complete # shift-tabで補完候補を逆順表示
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補間時に大文字小文字を区別しなsい
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補間時に大文字小文字を区別しない
 
 # --------
 # History
@@ -44,9 +44,13 @@ autoload -U colors; colors
 
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
+source $HOME/.zsh/prompt-ruby-current
 local AA_LIST >/dev/null
 AA_LIST=("(:3[___]" "(¦3[___]")
-PROMPT='%B%(?.%f.%F{red}@_@%f) %F{cyan}[%n@%m:%~]%f `prompt-git-current-branch`%b [%D{%m/%d %T}]
+local prompt_cdir="%F{cyan}[%n@%m:%~]%f"
+local prompt_time="[%D{%m/%d %T}]"
+PROMPT='%(?.%f.%F{red}@_@%f)`prompt-git-current-branch` `prompt-ruby-current`
+$prompt_cdir $prompt_time
 %(!.%F{red}%B%n%b%f # .%F{yellow}${AA_LIST[$[1+$RANDOM %2]]}%f $ )'
 PROMPT2='%_%% '
 SPROMPT="%r is currect? [n, y, a, e]: "
