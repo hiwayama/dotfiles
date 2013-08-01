@@ -44,13 +44,12 @@ autoload -U colors; colors
 
 setopt prompt_subst
 source $HOME/.zsh/prompt-git-current-branch
-source $HOME/.zsh/prompt-ruby-current
+source $HOME/.zsh/prompt-current-ruby
 local AA_LIST >/dev/null
 AA_LIST=("(:3[___]" "(¦3[___]")
 local prompt_cdir="%F{cyan}[%n@%m:%~]%f"
 local prompt_time="[%D{%m/%d %T}]"
-PROMPT='%(?.%f.%F{red}@_@%f)`prompt-git-current-branch` `prompt-ruby-current`
-$prompt_cdir $prompt_time
+PROMPT='%(?.%f.%F{red}@_@%f)$prompt_cdir $prompt_time `prompt-git-current-branch` `prompt-current-ruby`
 %(!.%F{red}%B%n%b%f # .%F{yellow}${AA_LIST[$[1+$RANDOM %2]]}%f $ )'
 PROMPT2='%_%% '
 SPROMPT="%r is currect? [n, y, a, e]: "

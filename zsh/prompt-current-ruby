@@ -1,9 +1,9 @@
 # prompt-ruby-current
 
-function prompt-ruby-current {
+function prompt-current-ruby {
   local name st color
   
-  if [ ! `ls | grep '\.rb'` ]
+  if [ ! `ls | grep '\.rb\|Rakefile'` ]
   then
     return
   fi  
