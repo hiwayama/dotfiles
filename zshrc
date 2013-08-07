@@ -75,8 +75,10 @@ export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xms512M -Xmx1024m -XX:MaxPermSize=2
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Perlbrew settings
-source $HOME/perl5/perlbrew/etc/bashrc
-
+if [ -d $HOME/perl5 ];
+then
+  source $HOME/perl5/perlbrew/etc/bashrc
+fi
 
 case "${OSTYPE}" in
   # Max(Unix)
