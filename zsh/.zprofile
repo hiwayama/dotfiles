@@ -1,6 +1,26 @@
+
+
+# prompt-ruby-current
+function prompt-current-ruby {
+  local name st color
+  
+  if [ ! `ls | grep '\.rb\|Rakefile'` ]
+  then
+    return
+  fi  
+
+  name=`ruby -v | grep -Go -e 'ruby [0-9.p]\+'`
+  if [[ -z $name ]]
+  then
+    return
+  fi
+  color="blue"
+  echo "%F{$color}[$name]%f"
+}
+
+
 # prompt-git-current-branch
 # http://smokycat.info/zsh/262より
-
 function prompt-git-current-branch {
   local name st color
   

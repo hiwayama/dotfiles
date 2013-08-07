@@ -1,13 +1,8 @@
-
-# ------
-# alias
-# ------
-alias ll='ls -lFh'
-alias la='ls -lFha'
-alias df='df -h'
-alias rm='rm -i'
-alias irb='pry'
-alias grep='grep --color=auto'
+# ---------------------------------- #
+# dotfiles/zshrc
+#
+#
+# ---------------------------------- #
 
 # ----------------
 # General Setting
@@ -30,7 +25,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補間時に大文字小�
 # --------
 # History
 # --------
-HISTFILE=~/.zsh_history # ヒストリを保存するファイル
+HISTFILE=$ZDOTDIR/.zsh_history # ヒストリを保存するファイル
 HISTSIZE=10000          # メモリに保存するヒストリの件数
 SAVEHIST=10000          # 保存されるヒストリの件数
 export HISTTIMEFORMAT='%y/%m/%d %H:%M:%S'
@@ -43,8 +38,6 @@ setopt hist_ignore_dups # 直前と同じコマンドはヒストリに追加し
 autoload -U colors; colors
 
 setopt prompt_subst
-source $HOME/.zsh/prompt-git-current-branch
-source $HOME/.zsh/prompt-current-ruby
 local AA_LIST >/dev/null
 AA_LIST=("(:3[___]" "(¦3[___]")
 local prompt_cdir="%F{cyan}[%n@%m:%~]%f"
@@ -67,14 +60,22 @@ export CLICOLOR=true
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 
+# -------
+# alias
+# -------
+if [ -f ~/.zsh/zalias ]; then
+  source $HOME/.zsh/zalias
+fi
+
 # JVMの起動設定
 export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xms512M -Xmx1024m -XX:MaxPermSize=256M -XX:PermSize=256M'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# RVM setting
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# Perlbrew settings
+# Perlbrew setting
 if [ -d $HOME/perl5 ];
 then
   source $HOME/perl5/perlbrew/etc/bashrc
