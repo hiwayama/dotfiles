@@ -8,10 +8,6 @@
 set nocompatible " vi interchange off
 filetype off
 
-" dotfiles directory path
-" WARN: please change to a suitable path
-let s:dotfiles_path='~/dotfiles/'
-
 " neobundle
 if has('vim_starting')
   set runtimepath+=~/.vim/neobundle.vim/
@@ -81,8 +77,7 @@ augroup load_templates
 augroup END
 
 " load key mapping setting
-execute "source" s:dotfiles_path.'vimrc.mapping'
-
+source $HOME/.vim/vimrc.mapping
 " load plugin dependent setting file
-execute "source" s:dotfiles_path.'vimrc.plugins_setting'
+source $HOME/.vim/vimrc.plugins_setting
 

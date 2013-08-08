@@ -1,4 +1,8 @@
-
+# --------------------------------- #
+# dotfiles/zsh/.zprofile
+# 
+#
+# --------------------------------- #
 
 # prompt-ruby-current
 function prompt-current-ruby {
