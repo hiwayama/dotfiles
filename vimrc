@@ -32,6 +32,7 @@ NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
 filetype plugin indent on
 
 syntax on
+set modelines=5
 set number
 set directory=$HOME/.vim/tmp " Backup Directory
 set clipboard=unnamed

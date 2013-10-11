@@ -1,6 +1,6 @@
 # init dotfiles
 
-DOTFILES = vimrc vim zshenv zsh tmux.conf gitconfig gemrc sbtconfig
+DOTFILES = vimrc vim zshenv zsh tmux.conf gitconfig gemrc sbtconfig pryrc
 
 init : link neobundle
 

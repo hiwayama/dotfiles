@@ -6,7 +6,7 @@
 # ----------------------------
 
 gem install activerecord
-gem install json haml sqlite3 nokogiri gnuplot
+gem install json haml sqlite3 nokogiri gnuplot awesome_print
 gem install rails -v 3.2.6
 gem install sinatra rspec
 
