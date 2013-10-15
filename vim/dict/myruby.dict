@@ -1,0 +1,18 @@
+# デフォルトで補完してくれない単語を追加するやつ
+# Gems
+awesome_print
+active_support
+active_support/core_ext
+# Exception  (only frequently words)
+NoMemoryError
+ScriptError
+LoadError
+NotImplementedError
+StandardError
+ArgumentError
+IOError
+RangeError
+RuntimeError
+TypeError
+ZeroDivisionError
+
