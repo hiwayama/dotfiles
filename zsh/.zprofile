@@ -5,10 +5,10 @@
 # --------------------------------- #
 
 # prompt-ruby-current
-function prompt-current-ruby {
+function prompt-current-ruby(){
   local name st color
   
-  if [ ! `ls | grep -E -e '\.rb|Rakefile'` ]
+  if [ ! `ls | grep -E -e '(\.rb)|(Rakefile)'` ]
   then
     return
   fi  
@@ -25,7 +25,7 @@ function prompt-current-ruby {
 
 # prompt-git-current-branch
 # http://smokycat.info/zsh/262より
-function prompt-git-current-branch {
+function prompt-git-current-branch(){
   local name st color
   
   name=`git symbolic-ref HEAD 2> /dev/null`
@@ -43,5 +43,5 @@ function prompt-git-current-branch {
   else
     color="red"
   fi
-  echo "%F{$color}[$name]%f"
+  echo " on %F{$color}$name%f"
 }

@@ -82,3 +82,7 @@ source $HOME/.vim/vimrc.mapping
 " load plugin dependent setting file
 source $HOME/.vim/vimrc.plugins_setting
 
+
+
+
+

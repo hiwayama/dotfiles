@@ -1,0 +1,1 @@
+/Users/iwayama/dotfiles/vim/plugins/vim-tmuxconf/after/syntax/tmuxconf.vim
