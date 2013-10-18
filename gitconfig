@@ -6,3 +6,5 @@
 	status = auto
 	branch = auto
   log = auto
+[alias]
+	show-graph = log --graph --abbrev-commit --pretty=oneline
