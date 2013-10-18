@@ -2,9 +2,9 @@
 	name = ymis1080
 	email = iwayma1880@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
   log = auto
 [alias]
 	show-graph = log --graph --abbrev-commit --pretty=oneline
