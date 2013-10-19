@@ -6,8 +6,9 @@
 # ------
 # alias
 # ------
-alias ll='ls -lFh'
-alias la='ls -lFha'
+alias ls='ls -p'
+alias ll='ls -lpFh'
+alias la='ls -lpFha'
 alias df='df -h'
 alias rm='rm -i'
 alias irb='pry'
