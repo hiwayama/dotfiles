@@ -6,11 +6,11 @@
 # ------
 # alias
 # ------
-alias ls='ls -p'
-alias ll='ls -lpFh'
-alias la='ls -lpFha'
+alias ll='ls -lFh'
+alias la='ls -lFha'
 alias df='df -h'
 alias rm='rm -i'
 alias irb='pry'
 alias grep='grep --color=auto'
 alias history='history -i'
+
