@@ -10,6 +10,12 @@ gem install json haml sqlite3 nokogiri gnuplot awesome_print
 gem install rails -v 3.2.6
 gem install sinatra rspec
 
-# for mac
-gem install rsruby -- --with-R-include=/Library/Frameworks/R.framework/Headers --with-R-lib=/Library/Frameworks/R.framework/Libraries
 
+case "${OSTYPE}" in
+  # Max(Unix)
+  darwin*)
+    # for mac
+    gem install rsruby -- --with-R-include=/Library/Frameworks/R.framework/Headers --with-R-lib=/Library/Frameworks/R.framework/Libraries
+  ;;
+  linux*)
+esac

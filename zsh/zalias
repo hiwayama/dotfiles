@@ -14,3 +14,5 @@ alias irb='pry'
 alias grep='grep --color=auto'
 alias history='history -i'
 
+alias timeadjust='sudo service ntpd start' # for linux VM working on VirtualBox
+
