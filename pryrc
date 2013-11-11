@@ -7,8 +7,16 @@
 # -------------------------- #
 
 # Set current directory path
-CURRENT = `pwd`.strip + "/"
-$:.unshift CURRENT
+def current path=nil
+  current = `pwd`.strip + "/"
+  if path
+    current + path  
+  else
+    current
+  end
+end
+
+$:.unshift current
 
 # editor
 Pry.config.editor = 'vim'
@@ -26,7 +34,7 @@ Pry.config.print = proc {|output, value| output.puts value.ai }
 
 # load ruby files which exist in current dir.
 def load_current
-  Dir.glob("#{CURRENT}*.rb") do |rb_file|
+  Dir.glob(current("*.rb")) do |rb_file|
     require rb_file
     puts "required #{File.basename(rb_file)}"
   end
