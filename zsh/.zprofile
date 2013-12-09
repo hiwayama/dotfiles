@@ -4,6 +4,11 @@
 #
 # --------------------------------- #
 
+# show ls when enter `cd`
+function cd(){
+  builtin cd $@ && ls -F;
+}
+
 # prompt-ruby-current
 function prompt-current-ruby(){
   local name st color
@@ -19,7 +24,7 @@ function prompt-current-ruby(){
     return
   fi
   color="blue"
-  echo "%F{$color}[$name]%f"
+  echo "%F{$color}[$name]%f";
 }
 
 
@@ -43,5 +48,5 @@ function prompt-git-current-branch(){
   else
     color="red"
   fi
-  echo " on %F{$color}$name%f"
+  echo " on %F{$color}$name%f";
 }

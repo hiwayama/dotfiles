@@ -6,12 +6,13 @@
 # ------
 # alias
 # ------
-alias ll='ls -lpFh --color=auto'
-alias la='ls -lpFha --color=auto'
+alias ll='ls -lFh'
+alias la='ls -lFha'
 alias df='df -h'
 alias rm='rm -i'
 alias irb='pry'
 alias grep='grep --color=auto'
 alias history='history -i'
+
 alias timeadjust='sudo service ntpd start' # for linux VM working on VirtualBox
 

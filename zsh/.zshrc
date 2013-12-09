@@ -101,6 +101,9 @@ then
   nvm use v0.10.21
 fi
 
+
+
+# compiled zshrc
 if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
 fi
