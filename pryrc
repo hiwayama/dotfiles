@@ -19,7 +19,7 @@ begin
   require'awesome_print/ext/active_record'
   require'awesome_print/ext/active_support'
   require'active_support'
-rescue LoadingError => err
+rescue LoadError => err
   puts "not installed :(  #{err}"
 end
 Pry.config.print = proc {|output, value| output.puts value.ai }

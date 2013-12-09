@@ -12,6 +12,17 @@ export LANG=ja_JP.UTF-8 # 文字コードをUTF-8に
 export KCODE=u          # KCODEにUTF-8を設定
 #export LC_ALL=C
 
+# ---------------
+# Path Setting
+# ---------------
+path=(
+  # ディレクトリのみを許可
+  $path(N-/^W)
+
+)
+typeset -U path PATH    # uniq化
+
+
 # -----------
 # Complement 
 # -----------
@@ -70,15 +81,28 @@ fi
 # JVMの起動設定
 export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xms512M -Xmx1024m -XX:MaxPermSize=256M -XX:PermSize=256M'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# ----------------
+# HogeVM Leading
+# ----------------
 # RVM setting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Perlbrew setting
-if [ -d $HOME/perl5 ];
+if [ -d ~/perl5 ];
 then
-  source $HOME/perl5/perlbrew/etc/bashrc
+  source ~/perl5/perlbrew/etc/bashrc
+fi
+
+if [ -d ~/.nvm ];
+then
+  source ~/.nvm/nvm.sh
+  nvm use v0.10.21
+fi
+
+if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
+  zcompile ~/.zsh/.zshrc
 fi
 
 case "${OSTYPE}" in

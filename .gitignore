@@ -3,5 +3,7 @@
 vim/bundle
 vim/neobundle.vim
 *history
+
 zsh/.zcompdump
 zsh/.zsh_history
+zsh/.zshrc.zwc
