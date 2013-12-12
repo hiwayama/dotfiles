@@ -15,7 +15,7 @@ export KCODE=u          # KCODEにUTF-8を設定
 # -----------
 # Complement 
 # -----------
-autoload -U compinit; compinit  # 補完機能を有効にする
+autoload -U compinit; compinit -u  # 補完機能を有効にする
 setopt auto_list                # 補完候補を一覧で表示する
 setopt auto_menu                # 補間キー連打で候補を順に表示
 setopt list_packed              # 補完候補をできるだけ詰めて表示する
@@ -79,6 +79,15 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 if [ -d $HOME/perl5 ];
 then
   source $HOME/perl5/perlbrew/etc/bashrc
+fi
+
+if [ -d $HOME/.nvm ];
+then
+  source $HOME/.nvm/nvm.sh
+  nvm use v0.10.21
+  export NODE_PATH=$HOME/.nvm/v0.10.21/lib/node_modules
+  NPM_PATH=$HOME/.nvm/v0.10.21/bin/npm
+  export PATH=$NPM_PATH:$NODE_PATH:$PATH
 fi
 
 case "${OSTYPE}" in
