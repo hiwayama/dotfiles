@@ -9,6 +9,17 @@ function cd(){
   builtin cd $@ && ls -F;
 }
 
+# open Dictionary.app for mac OS only
+function dict() {
+  if [ "$@" = "" ]; then
+    return
+  elif [ `uname` = "Darwin" ]; then
+    open "dict://$@"
+    echo $@ >> $HOME/dict.log >> $HOME/dict.txt
+    say  $@
+  fi
+}
+
 # prompt-ruby-current
 function prompt-current-ruby(){
   local name st color
