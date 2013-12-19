@@ -95,14 +95,6 @@ then
   source ~/perl5/perlbrew/etc/bashrc
 fi
 
-if [ -d ~/.nvm ];
-then
-  source ~/.nvm/nvm.sh
-  nvm use v0.10.21
-fi
-
-
-
 # compiled zshrc
 if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
@@ -121,6 +113,9 @@ case "${OSTYPE}" in
   # Max(Unix)
   darwin*)
     export R_HOME=/Library/Frameworks/R.framework/Resources
+
+    # TerminalからTexコンパイルする設定
+    export PATH=$PATH:/Library/TeX/Distributions/TeXLive-2010-64.texdist/Contents/Root/bin/x86_64-darwin
     alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
     ;;
   # Linux
