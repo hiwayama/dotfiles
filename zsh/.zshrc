@@ -1,5 +1,5 @@
 # ---------------------------------- #
-# dotfiles/zshrc
+# dotfiles/zsh/.zshrc
 #
 #
 # ---------------------------------- #
@@ -100,13 +100,14 @@ if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
 fi
 
+# NVM
 if [ -d $HOME/.nvm ];
 then
   source $HOME/.nvm/nvm.sh
   nvm use v0.10.21
-  export NODE_PATH=$HOME/.nvm/v0.10.21/lib/node_modules
-  NPM_PATH=$HOME/.nvm/v0.10.21/bin/npm
-  export PATH=$NPM_PATH:$NODE_PATH:$PATH
+  #export NODE_PATH=$HOME/.nvm/v0.10.21/lib/node_modules
+  #NPM_PATH=$HOME/.nvm/v0.10.21/bin/npm
+  #export PATH=$NPM_PATH:$NODE_PATH:$PATH
 fi
 
 case "${OSTYPE}" in
@@ -115,7 +116,8 @@ case "${OSTYPE}" in
     export R_HOME=/Library/Frameworks/R.framework/Resources
 
     # TerminalからTexコンパイルする設定
-    export PATH=$PATH:/Library/TeX/Distributions/TeXLive-2010-64.texdist/Contents/Root/bin/x86_64-darwin
+    export PATH=$PATH:/usr/texbin
+
     alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
     ;;
   # Linux
