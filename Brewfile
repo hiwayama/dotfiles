@@ -23,12 +23,15 @@ install libxml2
 # for Terminal
 install zsh
 install nkf
+install curl
+install wget
 install colordiff
 install tmux
 
 # for development
 install git
 install mysql
+install sqlite3
 install gnuplot
 install jq
 
