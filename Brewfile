@@ -36,6 +36,8 @@ install gnuplot
 install jq
 
 # Add softwares
+install cask dropbox
 install cask vagrant
 install cask virtualbox
+install cask firefox
 install cask google-chrome
