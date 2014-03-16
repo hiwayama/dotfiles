@@ -19,6 +19,7 @@ install readline
 install openssl
 install libyaml
 install libxml2
+install rmtrash
 
 # for Terminal
 install zsh
