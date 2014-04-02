@@ -17,6 +17,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Plugin list
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tpope/vim-fugitive'
 
