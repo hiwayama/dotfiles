@@ -13,6 +13,9 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
 
+" alternative to <ESC> 
+inoremap <C-j> <esc>
+
 " Closing Parenthesis Complement
 inoremap {<CR> {<CR>}<Up><End><CR>
 inoremap (<CR> (<CR>)<Up><End><CR>
