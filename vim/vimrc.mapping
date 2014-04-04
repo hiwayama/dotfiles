@@ -17,6 +17,7 @@ nnoremap <Up> gk
 inoremap {<CR> {<CR>}<Up><End><CR>
 inoremap (<CR> (<CR>)<Up><End><CR>
 inoremap [<CR> [<CR>]<Up><End><CR>
+"inoremap <C-s> <Esc>:w<Enter>i
 
 inoremap {} {}<LEFT>
 inoremap [] []<LEFT>
