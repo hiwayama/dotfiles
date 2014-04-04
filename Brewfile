@@ -6,6 +6,7 @@
 
 ## update Homebrew
 update
+upgrade
 
 ## Add Repositoy
 tap homebrew/binary
@@ -37,8 +38,15 @@ install gnuplot
 install jq
 
 # Add softwares
-install cask dropbox
-install cask vagrant
-install cask virtualbox
-install cask firefox
-install cask google-chrome
+cask install evernote
+cask install dropbox
+cask install skitch
+cask install vagrant
+cask install virtualbox
+cask install firefox
+cask install google-chrome
+cask install bettertouchtool
+cask install iterm2
+cask install mi
+cask install google-japanese-ime
+cask install skype

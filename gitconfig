@@ -1,11 +1,28 @@
 [user]
-	name = ymis1080
-	email = iwayma1880@gmail.com
+  name  = hiwayama
+  email = iwayma1880@gmail.com
 [color]
-  diff = auto
+  diff   = auto
   status = auto
   branch = auto
-  log = auto
+  log    = auto
 [alias]
-	show-graph = log --graph --abbrev-commit --pretty=oneline
-  
+  a     = add
+  b     = branch
+  bd    = branch -D
+  ch    = checkout
+  co    = commit -v
+  d     = diff
+  ds    = diff --stat
+  dw    = diff --color-words
+  s     = status --branch --short
+  l     = log --decorate
+  ls    = log --stat --decorate
+  lg    = log --graph --abbrev-commit --pretty=oneline
+  lp    = log --decorate --patch-with-stat
+  today = log --oneline --since='24 hour ago'
+[push]
+  default = current
+[core]
+  editor       = vim -c \"set fenc=utf-8\"
+  preloadindex = true

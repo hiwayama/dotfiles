@@ -2,17 +2,21 @@
 " dotfiles/vimrc
 "
 " Author: Hiromasa IWAYAMA
-" based on http://github.com/ymis1080/dotfiles
+" based on http://github.com/hiwayama/dotfiles
 " ==============================================
 
-set nocompatible " vi interchange off
-filetype off
+if 0 | endif
 
 " neobundle
 if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim/
+  if &compatible
+    set nocompatible
+  endif
+
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Plugin list
 NeoBundle 'Shougo/neocomplcache'
@@ -20,6 +24,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'junegunn/vim-easy-align'
 
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload': {'filetypes':['coffee']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': {'filetypes':['ruby', 'erb']}}
@@ -27,8 +32,9 @@ NeoBundleLazy 'plasticboy/vim-markdown', {'autoload': {'filetypes':['markdown']}
 NeoBundleLazy 'derekwyatt/vim-scala', {'autoload': {'filetypes':['scala']}}
 NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
 " NeoBundle 'h1mesuke/unite-outline'
-" NeoBundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
 " NeoBundle 'scrooloose/syntastic' 保存が遅くなる...
+
+call neobundle#end()
 
 filetype plugin indent on
 
