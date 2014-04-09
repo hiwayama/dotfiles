@@ -1,1 +1,0 @@
-/Users/iwayama/dotfiles/vim/plugins/vim-tmuxconf/ftdetect/tmuxconf.vim
