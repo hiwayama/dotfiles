@@ -74,7 +74,7 @@ augroup load_templates
   autocmd BufNewFile *.rb   0r $HOME/.vim/template/template.rb
   autocmd BufNewFile *.py   0r $HOME/.vim/template/template.py
   autocmd BufNewFile *.pl   0r $HOME/.vim/template/template.pl
-  autocmd BufNewFile *.pl   0r $HOME/.vim/template/template.pm
+  autocmd BufNewFile *.pm   0r $HOME/.vim/template/template.pm
   autocmd BufNewFile *.vim  0r $HOME/.vim/template/template.vim
   autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
