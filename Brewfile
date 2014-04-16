@@ -28,6 +28,7 @@ install nkf
 install curl
 install wget
 install colordiff
+install tree
 install tmux
 
 # for development

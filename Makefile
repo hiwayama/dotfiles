@@ -9,8 +9,7 @@ link: $(foreach f, $(DOTFILES), link-dotfiles-$(f))
 unlink: $(foreach f, $(DOTFILES), unlink-dotfiles-$(f))
 
 neobundle:
-	@git submodule init
-	@git submodule update
+	@git clone git://github.com/Shougo/neobundle.vim ${HOME}/.vim/neobundle.vim
 	@vim -c "NeoBundleInstall"
 
 link-dotfiles-%: %
