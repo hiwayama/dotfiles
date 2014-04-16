@@ -12,6 +12,7 @@
 # rootから!!!
 yum -y install mysql mysql-devel mysql-server\
  httpd httpd-server httpd-devel perl-DBI perl-DBD-MySQL
+yum -y install fcgi mod_fcgid fcgi_perl --enablerepo=epel
 
 # 元ファイルのバックアップ
 cp /etc/sysconfig/iptables /etc/sysconfig/iptables.origin
