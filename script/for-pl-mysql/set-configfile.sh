@@ -11,7 +11,7 @@
 # tmuxを起動してyum -y update中に実行したい...
 # rootから!!!
 yum -y install mysql mysql-devel mysql-server\
- httpd httpd-server httpd-devel perl-DBI perl-DBD-MySQL
+ httpd httpd-server httpd-devel perl-DBI perl-DBD-MySQL cpan
 yum -y install fcgi mod_fcgid fcgi_perl --enablerepo=epel
 
 # 元ファイルのバックアップ
