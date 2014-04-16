@@ -17,13 +17,14 @@ make init
 
 # MySQLのユーザ作成
 mysql_install_db
+service mysqld restart
 mysqladmin password 'rootroot'
 mysql -u root -p
   GRANT ALL PRIVILEGES ON *.* TO hiwayama@localhost
   IDENTIFIED BY 'hiwayama12345' WITH GRANT OPTION;
   FLUSH PRIVILEGES;
 # hiwayamaになってから
-mysql -u hiwayama -p < /home/hiwayama/dotfiles/for-pl-mysql/create-testdb.sql
+mysql -u hiwayama -p < /home/hiwayama/dotfiles/script/for-pl-mysql/create-testdb.sql
 # SELECT * FROM messages;で確認
 
 # githubの設定

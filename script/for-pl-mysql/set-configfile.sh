@@ -10,6 +10,7 @@
 # 設定ファイルの配置
 # tmuxを起動してyum -y update中に実行したい...
 # rootから!!!
+rpm -Uvh http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
 yum -y install mysql mysql-devel mysql-server\
  httpd httpd-server httpd-devel perl-DBI perl-DBD-MySQL cpan
 yum -y install fcgi mod_fcgid fcgi_perl --enablerepo=epel
@@ -33,10 +34,10 @@ cp -f ./check-pl-script/test.html /var/www/html/
 cp -f ./check-pl-script/test.pl /var/www/cgi-bin/
 cp -f ./check-pl-script/test.fpl /var/www/cgi-bin/
 
-service restart iptables
-service restart sshd
-service restart httpd
-service restart mysqld
+service iptables restart
+service sshd restart
+service httpd restart
+service mysqld restart
 chkconfig sshd on
 chkconfig httpd on
 chkconfig mysqld on
