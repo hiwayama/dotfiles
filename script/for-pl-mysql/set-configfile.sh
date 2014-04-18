@@ -38,6 +38,7 @@ service iptables restart
 service sshd restart
 service httpd restart
 service mysqld restart
+
 chkconfig sshd on
 chkconfig httpd on
 chkconfig mysqld on
