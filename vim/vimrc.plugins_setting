@@ -117,6 +117,6 @@ let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " ------------------------------
 "  nerdtree Settings
 " ------------------------------
-autocmd vimenter * NERDTree
-"autocmd vimenter * if !argc() | NERDTree | endif
+autocmd vimenter * if !argc() | NERDTree | endif
 nnoremap <C-n> :NERDTreeToggle<CR>
+
