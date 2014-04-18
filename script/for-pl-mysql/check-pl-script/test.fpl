@@ -14,7 +14,7 @@ while (new CGI::Fast) {
   print start_html("Fast CGI Rocks");
   print
     h1("Fast CGI Rocks"), 
-    "Invocation number ", b($COUNTER), 
+    "Invocation number ", b($COUNTER++), 
     hr;
   print end_html;
 }
