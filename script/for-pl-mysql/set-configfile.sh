@@ -9,11 +9,10 @@
 # ---------
 # 設定ファイルの配置
 # tmuxを起動してyum -y update中に実行したい...
-# rootから!!!
 rpm -Uvh http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
 yum -y install mysql mysql-devel mysql-server\
  httpd httpd-server httpd-devel perl-DBI perl-DBD-MySQL cpan
-yum -y install fcgi mod_fcgid fcgi-perl perl-HTML-Template-Pro perl-Time-HiRes Digest-SHA1 --enablerepo=epel
+yum -y install fcgi mod_fcgid fcgi-perl perl-HTML-Template-Pro perl-Time-HiRes perl-Digest-SHA1 --enablerepo=epel
 
 # 元ファイルのバックアップ
 cp /etc/sysconfig/iptables /etc/sysconfig/iptables.origin
