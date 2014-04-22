@@ -1,35 +1,11 @@
 " ==============================================
-" dotfiles/vimrc
+" dotfiles/vimrc.minimal
+"
+" independent ViM plugin
 "
 " Author: Hiromasa IWAYAMA
 " based on http://github.com/ymis1080/dotfiles
 " ==============================================
-
-set nocompatible " vi interchange off
-filetype off
-
-" neobundle
-if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim/
-endif
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" Plugin list
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/nerdtree'
-
-NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload': {'filetypes':['coffee']}}
-NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': {'filetypes':['ruby', 'erb']}}
-NeoBundleLazy 'plasticboy/vim-markdown', {'autoload': {'filetypes':['markdown']}}
-NeoBundleLazy 'derekwyatt/vim-scala', {'autoload': {'filetypes':['scala']}}
-NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
-" NeoBundle 'h1mesuke/unite-outline'
-" NeoBundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
-" NeoBundle 'scrooloose/syntastic' 保存が遅くなる...
 
 filetype plugin indent on
 
@@ -51,7 +27,7 @@ highlight clear CursorLine
 highlight CursorLine gui=underline ctermbg=black
 
 " Statusline
-set statusline=%F%m%r%h%w\%=%{fugitive#statusline()}[TYPE=%Y]\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
+set statusline=%F%m%r%h%w\%=%[TYPE=%Y]\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
 set laststatus=2
 highlight StatusLine ctermfg=Green
 augroup ch_status_color
@@ -82,10 +58,4 @@ augroup END
 
 " load key mapping setting
 source $HOME/.vim/vimrc.mapping
-" load plugin dependent setting file
-source $HOME/.vim/vimrc.plugins_setting
-
-
-
-
 

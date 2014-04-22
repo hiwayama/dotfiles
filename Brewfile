@@ -30,6 +30,7 @@ install wget
 install colordiff
 install tree
 install tmux
+install tig
 
 # for development
 install git

@@ -7,7 +7,7 @@
   branch = auto
   log = auto
 [alias]
-	show-graph = log --graph --abbrev-commit --pretty=oneline
+	lg = log --graph --abbrev-commit --pretty=oneline
   s = status --branch --short  
   l = log --decorate
   lp = log --decorate --stat --patch
