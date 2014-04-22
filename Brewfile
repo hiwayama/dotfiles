@@ -33,7 +33,6 @@ install tmux
 install tig
 
 # for development
-install git
 install mysql
 install sqlite3
 install gnuplot
