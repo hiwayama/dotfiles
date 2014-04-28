@@ -19,3 +19,5 @@ autocmd BufNewFile,BufRead *.md       setl filetype=markdown
 autocmd BufNewFile,BufRead *.html.ep  setl filetype=html
 autocmd BufNewFile,BufRead *.tx       setl filetype=html
 autocmd BufNewFile,BufRead *.tt       setl filetype=html
+
+autocmd BufNewFile,BufRead *.go       setl filetype=go

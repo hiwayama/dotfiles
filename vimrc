@@ -80,6 +80,11 @@ augroup load_templates
   autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
 
+" for golang
+if $GOROOT != ''
+  set rtp+=${GOROOT}/misc/vim
+endif
+
 " load key mapping setting
 source $HOME/.vim/vimrc.mapping
 " load plugin dependent setting file
