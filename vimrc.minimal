@@ -56,6 +56,35 @@ augroup load_templates
   autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
 
-" load key mapping setting
-source $HOME/.vim/vimrc.mapping
 
+"------------------------------------------
+" Key Mapping
+"------------------------------------------
+" display lines moving
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+
+" alternative to <ESC> 
+inoremap <C-j> <esc>
+
+" Closing Parenthesis Complement
+inoremap {<CR> {<CR>}<Up><End><CR>
+inoremap (<CR> (<CR>)<Up><End><CR>
+inoremap [<CR> [<CR>]<Up><End><CR>
+"inoremap <C-s> <Esc>:w<Enter>i
+
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap <> <><LEFT>
+
+" Symbol Alias
+inoremap <C-d> $
+inoremap <C-a> @
+
+" add space next to dot
+inoremap , ,<Space>
