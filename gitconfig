@@ -10,4 +10,5 @@
 	lg = log --graph --abbrev-commit --pretty=oneline
   s = status --branch --short  
   l = log --decorate
-  lp = log --decorate --stat --patch
+  lp = log --decorate --patch-with-stat
+
