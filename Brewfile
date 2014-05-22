@@ -52,3 +52,4 @@ cask install mi
 cask install google-japanese-ime
 cask install skype
 cask install mou # Markdown Editor
+cask install keyremap4macbook
