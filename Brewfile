@@ -37,6 +37,7 @@ install mysql
 install sqlite3
 install gnuplot
 install jq
+install autojump
 
 # Add softwares
 cask install evernote

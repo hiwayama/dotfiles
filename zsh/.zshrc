@@ -91,10 +91,14 @@ if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
 fi
 
+if [ -f `brew --prefix`/etc/autojump ]; then
+  `brew --prefix`/etc/autojump
+fi
+
 
 case "${OSTYPE}" in
   # Max(Unix)
-  darwin*)
+  darwin*)  
     export R_HOME=/Library/Frameworks/R.framework/Resources
 
     # for golang
