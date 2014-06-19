@@ -51,7 +51,7 @@ setopt prompt_subst
 local prompt_cdir="%F{cyan}%n@%m:%~%f"
 local prompt_time="[%D{%m/%d %T}]"
 PROMPT='%(?.%f.%F{red}@_@%f)[$prompt_cdir`prompt-git-current-branch`] $prompt_time `prompt-current-ruby`
-%(!.%F{red}%B%n%b%f # .$ )'
+%(!.%F{red}%B%n%b%f # .%c$ )'
 PROMPT2='%_%% '
 SPROMPT="%r is currect? [n, y, a, e]: "
 
