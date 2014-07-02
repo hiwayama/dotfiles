@@ -82,9 +82,6 @@ inoremap "" ""<LEFT>
 inoremap '' ''<LEFT>
 inoremap <> <><LEFT>
 
-" Symbol Alias
-inoremap <C-d> $
-inoremap <C-a> @
 
 " add space next to dot
 inoremap , ,<Space>
