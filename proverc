@@ -4,7 +4,7 @@
 -lvcf
 --recurse t
 --shuffle
---jobs 4
+--jobs 4 # 並列実行
 --trap
 --timer
 

@@ -10,7 +10,6 @@
 export EDITOR=vim       # エディタをVimに 
 export LANG=ja_JP.UTF-8 # 文字コードをUTF-8に
 export KCODE=u          # KCODEにUTF-8を設定
-#export LC_ALL=C
 
 # ---------------
 # Path Setting
@@ -91,11 +90,6 @@ if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
 fi
 
-if [ -f `brew --prefix`/etc/autojump ]; then
-  `brew --prefix`/etc/autojump
-fi
-
-
 case "${OSTYPE}" in
   # Max(Unix)
   darwin*)  
@@ -108,7 +102,6 @@ case "${OSTYPE}" in
     # TerminalからTexコンパイルする設定
     export PATH=$PATH:/usr/texbin
 
-    alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
     ;;
   # Linux
   linux*)

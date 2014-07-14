@@ -49,8 +49,7 @@ cask install firefox
 cask install google-chrome
 cask install bettertouchtool
 cask install iterm2
-cask install mi
+cask install atom
 cask install google-japanese-ime
 cask install skype
-cask install mou # Markdown Editor
 cask install keyremap4macbook

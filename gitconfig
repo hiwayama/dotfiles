@@ -12,3 +12,5 @@
   l = log --decorate
   lp = log --decorate --patch-with-stat
 
+[push]
+	default = current
