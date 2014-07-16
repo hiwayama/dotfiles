@@ -6,7 +6,8 @@
 # ------
 # alias
 # ------
-alias ls='ls -F --color'
+alias ...='cd ../../'
+alias ls='ls -F'
 alias ll='ls -lFh'
 alias la='ls -lFha'
 alias df='df -h'
