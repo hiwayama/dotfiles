@@ -8,9 +8,10 @@
   log = auto
 [alias]
 	lg = log --graph --abbrev-commit --pretty=oneline
-  s = status --branch --short  
-  l = log --decorate
+  s  = status --branch --short  
+  l  = log --decorate
   lp = log --decorate --patch-with-stat
-
+  b  = branch
+  ds = diff --stat
 [push]
 	default = current
