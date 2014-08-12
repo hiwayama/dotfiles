@@ -27,6 +27,8 @@ autoload -U compinit; compinit -u  # 補完機能を有効にする
 setopt auto_list                # 補完候補を一覧で表示する
 setopt auto_menu                # 補間キー連打で候補を順に表示
 setopt list_packed              # 補完候補をできるだけ詰めて表示する
+setopt auto_pushd # cd -<tab>で以前移動したディレクトリを表示
+setopt pushd_ignore_dups # auto_pushdで重複するディレクトリは記録しない
 bindkey "^[[Z" reverse-menu-complete # shift-tabで補完候補を逆順表示
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補間時に大文字小文字を区別しない
 
@@ -37,6 +39,7 @@ HISTFILE=$ZDOTDIR/.zsh_history # ヒストリを保存するファイル
 HISTSIZE=10000          # メモリに保存するヒストリの件数
 SAVEHIST=10000          # 保存されるヒストリの件数
 export HISTTIMEFORMAT='%y/%m/%d %H:%M:%S'
+setopt append_history   # 履歴を追加する.
 setopt extended_history # ヒストリに実行時間も保存
 setopt hist_ignore_dups # 直前と同じコマンドはヒストリに追加しない
 
