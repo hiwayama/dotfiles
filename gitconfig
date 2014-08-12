@@ -7,11 +7,13 @@
   branch = auto
   log = auto
 [alias]
-	lg = log --graph --abbrev-commit --pretty=oneline
+  b  = branch
+  ch = checkout
+  d  = diff
+  ds = diff --stat
   s  = status --branch --short  
   l  = log --decorate
+	lg = log --graph --abbrev-commit --pretty=oneline
   lp = log --decorate --patch-with-stat
-  b  = branch
-  ds = diff --stat
 [push]
 	default = current

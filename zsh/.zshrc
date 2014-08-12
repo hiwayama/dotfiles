@@ -17,7 +17,6 @@ export KCODE=u          # KCODEにUTF-8を設定
 path=(
   # ディレクトリのみを許可
   $path(N-/^W)
-
 )
 typeset -U path PATH    # uniq化
 
@@ -70,8 +69,8 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # -------
 # alias
 # -------
-if [ -f ~/.zsh/zalias ]; then
-  source $HOME/.zsh/zalias
+if [ -f ${HOME}/.aliases ]; then
+  source $HOME/.aliases;
 fi
 
 # JVMの起動設定

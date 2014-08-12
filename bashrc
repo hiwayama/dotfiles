@@ -4,13 +4,10 @@
 # Author: Hiromasa IWAYAMA 
 # ------------------------- #
 
-# alias
-alias ...='cd ../'
-alias rm='rm -i'
-alias ls='ls -p --color=auto'
-alias ll='ls -lpFh --color=auto'
-alias la='ls -lpFha --color=auto'
-alias df='df -h'
 
 export EDITOR='vim'
 
+# alias
+if [ -f ${HOME}/.aliases ]; then
+  source ${HOME}/.aliases
+fi
