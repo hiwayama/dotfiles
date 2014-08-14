@@ -1,12 +1,8 @@
-# ---------------------- #
-# zalias
-#
-# ---------------------- #
-
 # ------
 # alias
 # ------
 alias ...='cd ../../'
+alias g='git'
 alias ls='ls -F'
 alias ll='ls -lFh'
 alias la='ls -lFha'

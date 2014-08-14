@@ -9,6 +9,21 @@ function cd(){
   builtin cd $@ && ls -F;
 }
 
+function gb() {
+  name=`git symbolic-ref HEAD 2> /dev/null`
+  if [[ -z $name ]]
+  then
+    echo "not found git repository"
+    return
+  fi
+
+  for b in `git branch | peco` 
+  do 
+    git checkout ${b/\*/}
+    break;
+  done
+}
+
 # open Dictionary.app for mac OS only
 function dict() {
   if [ "$@" = "" ]; then

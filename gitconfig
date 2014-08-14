@@ -7,10 +7,14 @@
   branch = auto
   log = auto
 [alias]
+  b  = branch
+  ch = checkout
+  d  = diff
+  ds = diff --stat
+  s  = status --branch --short  
+  l  = log --decorate
 	lg = log --graph --abbrev-commit --pretty=oneline
-  s = status --branch --short  
-  l = log --decorate
   lp = log --decorate --patch-with-stat
-
+  today = log --online --since='24 hour ago'
 [push]
 	default = current
