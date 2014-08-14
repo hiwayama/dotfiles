@@ -7,6 +7,8 @@
 
 set nocompatible " vi interchange off
 filetype off
+set fileencoding=utf-8
+set fileencodings=utf-8,euc-jp,cp932
 
 " neobundle
 if has('vim_starting')
@@ -46,9 +48,11 @@ set incsearch
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " Cursorline
-set cursorline
+set cursorline cursorcolumn
 highlight clear CursorLine
 highlight CursorLine gui=underline ctermbg=black
+highlight clear CursorColumn
+highlight CursorColumn gui=underline ctermbg=black
 
 " Statusline
 set statusline=%F%m%r%h%w\%=%{fugitive#statusline()}[TYPE=%Y]\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
