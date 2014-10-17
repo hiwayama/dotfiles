@@ -1,0 +1,7 @@
+# vim: ft=conf
+
+*.log
+
+# perl
+.proverc
+.perlversion
