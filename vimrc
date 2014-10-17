@@ -7,10 +7,13 @@
 
 set nocompatible " vi interchange off
 filetype off
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
+
 
 " neobundle
 if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim/
+  set runtimepath+=${HOME}/.vim/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
@@ -67,13 +70,15 @@ set expandtab
 set tabstop=2 softtabstop=0
 set shiftwidth=2
 
+au BufRead *.pm set noet " 過去のperlファイルはハードタブで開く
+
 " Key bind for Wraparound
 set whichwrap=b,s,h,l,[,],<,>,~
 
 " Load Templates
 augroup load_templates
   autocmd!
-  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml 
+  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
   autocmd BufNewFile *.rb   0r $HOME/.vim/template/template.rb
   autocmd BufNewFile *.py   0r $HOME/.vim/template/template.py
   autocmd BufNewFile *.pl   0r $HOME/.vim/template/template.pl
@@ -82,6 +87,9 @@ augroup load_templates
   autocmd BufNewFile *.vim  0r $HOME/.vim/template/template.vim
   autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
+
+" 行末スペース自動削除
+autocmd BufWritePre * :%s/\s\+$//e
 
 " for golang
 if $GOROOT != ''
