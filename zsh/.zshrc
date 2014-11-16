@@ -7,7 +7,7 @@
 # ----------------
 # General Setting
 # ----------------
-export EDITOR=vim       # エディタをVimに 
+export EDITOR=vim       # エディタをVimに
 export LANG=ja_JP.UTF-8 # 文字コードをUTF-8に
 export KCODE=u          # KCODEにUTF-8を設定
 
@@ -21,7 +21,7 @@ path=(
 typeset -U path PATH    # uniq化
 
 # -----------
-# Complement 
+# Complement
 # -----------
 autoload -U compinit; compinit -u  # 補完機能を有効にする
 setopt auto_list                # 補完候補を一覧で表示する
@@ -49,7 +49,7 @@ setopt hist_ignore_dups # 直前と同じコマンドはヒストリに追加し
 autoload -U colors; colors
 
 setopt prompt_subst
-local prompt_cdir="%F{cyan}%n@%m:%~%f"
+local prompt_cdir="%F{cyan}%n:%~%f"
 local prompt_time="[%D{%m/%d %T}]"
 PROMPT='%(?.%f.%F{red}@_@%f)[$prompt_cdir`prompt-git-current-branch`] $prompt_time `prompt-current-ruby`
 %(!.%F{red}%B%n%b%f # .%c$ )'
@@ -84,7 +84,7 @@ if [ -d ${HOME}/.anyenv ] ; then
   eval "$(anyenv init -)"
   for D in `ls $HOME/.anyenv/envs`
   do
-    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH" 
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
   done
 fi
 # compiled zshrc
@@ -94,7 +94,7 @@ fi
 
 case "${OSTYPE}" in
   # Max(Unix)
-  darwin*)  
+  darwin*)
     export R_HOME=/Library/Frameworks/R.framework/Resources
 
     # for golang

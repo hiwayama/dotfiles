@@ -15,13 +15,14 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
 if has('vim_starting')
   set runtimepath+=${HOME}/.vim/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Plugin list
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 
@@ -33,6 +34,8 @@ NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
 " NeoBundle 'h1mesuke/unite-outline'
 " NeoBundle 'mdreves/vim-scaladoc' +pythonでvimをコンパイルしてから...
 " NeoBundle 'scrooloose/syntastic' 保存が遅くなる...
+
+call neobundle#end()
 
 filetype plugin indent on
 
@@ -102,6 +105,3 @@ source $HOME/.vim/vimrc.mapping
 source $HOME/.vim/vimrc.plugins_setting
 
 let omni_sql_no_default_maps=1
-
-
-

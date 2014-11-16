@@ -37,7 +37,6 @@ install mysql
 install sqlite3
 install gnuplot
 install jq
-install autojump
 
 # Add softwares
 cask install evernote
@@ -52,4 +51,4 @@ cask install iterm2
 cask install atom
 cask install google-japanese-ime
 cask install skype
-cask install keyremap4macbook
+cask install karabiner
