@@ -6,10 +6,12 @@
   status = auto
   branch = auto
   log = auto
+  grep = auto
 [alias]
   a  = add
   b  = branch
   ch = checkout
+  co = commit
   d  = diff
   ds = diff --stat
   s  = status --branch --short
@@ -19,4 +21,7 @@
   ls = log --stat --decorate
   today = log --oneline --since='24 hour ago'
 [push]
-	default = current
+  default = current
+[core]
+  preloadindex = true
+  editor = vim -c \"set fenc=utf-8\"

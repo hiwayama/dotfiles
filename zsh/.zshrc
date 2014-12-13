@@ -92,6 +92,9 @@ if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
 fi
 
+export PATH=$HOME/.plenv/bin:$PATH
+eval "$(plenv init -)"
+
 case "${OSTYPE}" in
   # Max(Unix)
   darwin*)
