@@ -4,6 +4,9 @@
 #
 # ---------------- #
 
+# brew tap matsu-chara/brew-bundle
+# install brew-bundle
+
 ## update Homebrew
 update
 upgrade
