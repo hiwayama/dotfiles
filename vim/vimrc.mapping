@@ -1,6 +1,6 @@
 " ===========================================
 " dotfiles/vimrc.mapping
-" 
+"
 " Author: Hiromasa IWAYAMA
 " ===========================================
 
@@ -12,8 +12,9 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
+nnoremap Y y$
 
-" alternative to <ESC> 
+" alternative to <ESC>
 inoremap <C-j> <esc>
 
 " Closing Parenthesis Complement

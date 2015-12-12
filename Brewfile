@@ -55,3 +55,4 @@ cask install atom
 cask install google-japanese-ime
 cask install skype
 cask install karabiner
+cask install mi

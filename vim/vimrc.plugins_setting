@@ -113,13 +113,11 @@ let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-
 " ------------------------------
 "  nerdtree Settings
 " ------------------------------
 autocmd vimenter * if !argc() | NERDTree | endif
 nnoremap <C-n> :NERDTreeToggle<CR>
-
 
 " ------------------------------
 "  vim-figitive Settings
@@ -136,7 +134,7 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> ,uk :<C-u>Unite bookmark<CR>
 
-
-
-
-
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
