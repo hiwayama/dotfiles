@@ -35,24 +35,4 @@ install tree
 install tmux
 install tig
 
-# for development
-install mysql
-install sqlite3
-install gnuplot
 install jq
-
-# Add softwares
-cask install evernote
-cask install dropbox
-cask install skitch
-cask install vagrant
-cask install virtualbox
-cask install firefox
-cask install google-chrome
-cask install bettertouchtool
-cask install iterm2
-cask install atom
-cask install google-japanese-ime
-cask install skype
-cask install karabiner
-cask install mi

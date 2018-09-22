@@ -79,34 +79,14 @@ fi
 # JVMの起動設定
 export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xms512M -Xmx1024m -XX:MaxPermSize=256M -XX:PermSize=256M'
 
-if [ -d ${HOME}/.anyenv ] ; then
-  export PATH=${HOME}/.anyenv/bin:${PATH}
-  eval "$(anyenv init -)"
-  for D in `ls $HOME/.anyenv/envs`
-  do
-    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
-  done
-fi
 # compiled zshrc
 if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
   zcompile ~/.zsh/.zshrc
 fi
 
-export PATH=$HOME/.plenv/bin:$PATH
-eval "$(plenv init -)"
-
 case "${OSTYPE}" in
   # Max(Unix)
   darwin*)
-    export R_HOME=/Library/Frameworks/R.framework/Resources
-
-    # for golang
-    export GOROOT=/usr/local/Cellar/go/1.2.1/libexec
-    export GOPATH=${HOME}/.go
-
-    # TerminalからTexコンパイルする設定
-    export PATH=$PATH:/usr/texbin
-
     ;;
   # Linux
   linux*)

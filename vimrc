@@ -28,13 +28,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'junegunn/vim-easy-align'
 
-NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload': {'filetypes':['coffee']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': {'filetypes':['ruby', 'erb']}}
 NeoBundleLazy 'plasticboy/vim-markdown', {'autoload': {'filetypes':['markdown']}}
-NeoBundleLazy 'derekwyatt/vim-scala', {'autoload': {'filetypes':['scala']}}
-NeoBundleLazy 'vim-perl/vim-perl', {'autoload': {'filetypes':['perl']}}
-" NeoBundle 'h1mesuke/unite-outline'
-" NeoBundle 'scrooloose/syntastic' 保存が遅くなる...
 
 call neobundle#end()
 
@@ -78,31 +73,17 @@ set expandtab
 set tabstop=2 softtabstop=0
 set shiftwidth=2
 
-au BufRead *.pm set noet " 過去のperlファイルはハードタブで開く
-
 " Key bind for Wraparound
 set whichwrap=b,s,h,l,[,],<,>,~
 
 " Load Templates
 augroup load_templates
   autocmd!
-  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml
-  autocmd BufNewFile *.rb   0r $HOME/.vim/template/template.rb
-  autocmd BufNewFile *.py   0r $HOME/.vim/template/template.py
-  autocmd BufNewFile *.pl   0r $HOME/.vim/template/template.pl
-  autocmd BufNewFile *.t    0r $HOME/.vim/template/template.t
-  autocmd BufNewFile *.pm   0r $HOME/.vim/template/template.pm
   autocmd BufNewFile *.vim  0r $HOME/.vim/template/template.vim
-  autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
 augroup END
 
 " 行末スペース自動削除
 autocmd BufWritePre * :%s/\s\+$//e
-
-" for golang
-if $GOROOT != ''
-  set rtp+=${GOROOT}/misc/vim
-endif
 
 " load key mapping setting
 source $HOME/.vim/vimrc.mapping
