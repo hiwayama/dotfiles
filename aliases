@@ -3,14 +3,16 @@
 # ------
 alias ...='cd ../../'
 alias g='git'
-alias ls='ls -F'
-alias ll='ls -lFh'
-alias la='ls -lFha'
+alias ls='exa'
+alias ll='exa -lFh'
+alias la='exa -lFha'
 alias df='df -h'
 alias irb='pry'
 alias grep='grep --color=auto'
 alias history='history -i'
 alias mkdir='mkdir -p'
 alias tree='tree -CF -L 1'
+alias dc='docker-compose'
+alias duu='du -h -d 1'
 
 alias timeadjust='sudo service ntpd start' # for linux VM working on VirtualBox
