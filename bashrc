@@ -1,9 +1,8 @@
 # ------------------------- #
 # dotfiles/bashrc
-# 
-# Author: Hiromasa IWAYAMA 
+#
+# Author: Hiromasa IWAYAMA
 # ------------------------- #
-
 
 export EDITOR='vim'
 

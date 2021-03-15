@@ -19,11 +19,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Plugin list
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'junegunn/vim-easy-align'
@@ -75,12 +70,6 @@ set shiftwidth=2
 
 " Key bind for Wraparound
 set whichwrap=b,s,h,l,[,],<,>,~
-
-" Load Templates
-augroup load_templates
-  autocmd!
-  autocmd BufNewFile *.vim  0r $HOME/.vim/template/template.vim
-augroup END
 
 " 行末スペース自動削除
 autocmd BufWritePre * :%s/\s\+$//e

@@ -4,7 +4,7 @@
 " independent ViM plugin
 "
 " Author: Hiromasa IWAYAMA
-" based on http://github.com/ymis1080/dotfiles
+" based on http://github.com/hiwayama/dotfiles
 " ==============================================
 
 filetype plugin indent on
@@ -44,19 +44,6 @@ set shiftwidth=2
 " Key bind for Wraparound
 set whichwrap=b,s,h,l,[,],<,>,~
 
-" Load Templates
-augroup load_templates
-  autocmd!
-  autocmd BufNewFile *.haml 0r $HOME/.vim/template/template.haml 
-  autocmd BufNewFile *.rb   0r $HOME/.vim/template/template.rb
-  autocmd BufNewFile *.py   0r $HOME/.vim/template/template.py
-  autocmd BufNewFile *.pl   0r $HOME/.vim/template/template.pl
-  autocmd BufNewFile *.pm   0r $HOME/.vim/template/template.pm
-  autocmd BufNewFile *.vim  0r $HOME/.vim/template/template.vim
-  autocmd BufNewFile *Suite.scala 0r $HOME/.vim/template/template.suite.scala
-augroup END
-
-
 "------------------------------------------
 " Key Mapping
 "------------------------------------------
@@ -66,7 +53,7 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
 
-" alternative to <ESC> 
+" alternative to <ESC>
 inoremap <C-j> <esc>
 
 " Closing Parenthesis Complement

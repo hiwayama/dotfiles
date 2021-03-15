@@ -1,6 +1,7 @@
 # dotfiles
 
-before using this dotfiles, enter this command  
+before using this dotfiles, enter this command
 
-    make init  
+    brew bundle
+    make init
 

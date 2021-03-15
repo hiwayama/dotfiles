@@ -76,13 +76,14 @@ if [ -f ${HOME}/.aliases ]; then
   source $HOME/.aliases;
 fi
 
-# JVMの起動設定
-export _JAVA_OPTIONS='-Dfile.encoding=UTF-8 -Xms512M -Xmx1024m -XX:MaxPermSize=256M -XX:PermSize=256M'
+# nodenv
+eval "$(nodenv init -)"
 
-# compiled zshrc
-if [ ! -f ~/.zsh/.zshrc.zwc -o ~/.zsh/.zshrc -nt ~/.zsh/.zshrc.zwc ]; then
-  zcompile ~/.zsh/.zshrc
-fi
+# mysql-client
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+# android
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
 case "${OSTYPE}" in
   # Max(Unix)
