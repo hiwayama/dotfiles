@@ -1,6 +1,6 @@
 [user]
-  name  = hiwayama
-  email = iwayma1880@gmail.com
+	name = H.IWAYAMA
+	email = 1152796+hiwayama@users.noreply.github.com
 [color]
   diff   = auto
   status = auto
@@ -27,3 +27,5 @@
 [core]
   editor       = vim -c \"set fenc=utf-8\"
   preloadindex = true
+[pull]
+	ff = only
