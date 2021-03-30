@@ -27,9 +27,6 @@ NeoBundleLazy 'plasticboy/vim-markdown', {'autoload': {'filetypes':['markdown']}
 
 call neobundle#end()
 
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
-
 " load basic settings
 source ${HOME}/.vim/basic.vimrc
 " load key mapping setting

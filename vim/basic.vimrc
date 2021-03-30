@@ -16,6 +16,9 @@ set directory=$HOME/.vim/tmp " Backup Directory
 set clipboard=unnamed
 set history=100 " keep 100 lines of command line history
 
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
+
 " Search
 set hlsearch
 set incsearch
@@ -29,7 +32,10 @@ highlight clear CursorColumn
 highlight CursorColumn gui=underline ctermbg=black
 
 " Statusline
-set statusline=%F%m%r%h%w\%=%[TYPE=%Y]\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
+set statusline=%F%m%r%h%w
+set statusline+=\%=
+set statusline+=[TYPE=%Y]
+set statusline+=\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
 set laststatus=2
 highlight StatusLine ctermfg=Green
 augroup ch_status_color
