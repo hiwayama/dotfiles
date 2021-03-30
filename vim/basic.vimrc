@@ -1,5 +1,5 @@
 " ==============================================
-" dotfiles/vimrc.minimal
+" dotfiles/.vim/basic.vimrc
 "
 " independent ViM plugin
 "
@@ -22,9 +22,11 @@ set incsearch
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " Cursorline
-set cursorline
+set cursorline cursorcolumn
 highlight clear CursorLine
 highlight CursorLine gui=underline ctermbg=black
+highlight clear CursorColumn
+highlight CursorColumn gui=underline ctermbg=black
 
 " Statusline
 set statusline=%F%m%r%h%w\%=%[TYPE=%Y]\[ENC=%{&fileencoding}:%{&ff}]\[ROW=%l/%L]
