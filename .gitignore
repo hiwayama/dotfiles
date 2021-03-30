@@ -7,3 +7,5 @@ vim/neobundle.vim
 zsh/.zcompdump
 zsh/.zsh_history
 zsh/.zshrc.zwc
+zsh/.zsh_sessions
+zsh/.zprezto
